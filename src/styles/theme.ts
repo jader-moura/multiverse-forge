@@ -63,7 +63,7 @@ export const materialUiTheme = createTheme({
 						backgroundColor: theme.palette.primary.main,
 						color: theme.palette.primary.light,
 						minWidth: '177px',
-						height: '57px',
+						height: '45px',
 						borderRadius: '4px',
 						fontSize: '14px',
 					},

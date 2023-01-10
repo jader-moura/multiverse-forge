@@ -1,9 +1,9 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Container } from '@mui/system';
 import { Wrapper } from './styles';
 
 interface BodyProps {
-	children: ReactNode;
+	children: any;
 }
 
 const Body: React.FC<BodyProps> = ({ children }) => {
