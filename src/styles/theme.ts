@@ -1,22 +1,25 @@
 import createTheme from '@mui/material/styles/createTheme';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export const styledComponentsTheme = {
-	main: '#F65261',
-	mainDark: '#232323',
-	lightGrey: '#555555',
-	darkGrey: '#424242',
+	main: '#64EACB',
+	mainDark: '#171E2F',
+	lightGrey: '#026773',
+	darkGrey: '#024959',
 	mainLight: '#FFFFFF',
 };
 
 export const materialUiTheme = createTheme({
 	typography: {
-		fontFamily: 'Montserrat, sans-serif !important',
+		fontFamily: 'Orbitron, sans-serif !important',
 	},
 	components: {
 		MuiCssBaseline: {
 			styleOverrides: `
 		  @font-face {
-			font-family: 'Montserrat', sans-serif !important;
+			font-family: 'Orbitron, sans-serif !important;
 		  }
 		`,
 		},
@@ -52,6 +55,7 @@ export const materialUiTheme = createTheme({
 						color: theme.palette.primary.light,
 						fontSize: '1rem',
 						padding: '1rem',
+						borderRadius: '4px',
 					},
 				}),
 			},
@@ -166,9 +170,9 @@ export const materialUiTheme = createTheme({
 	},
 	palette: {
 		primary: {
-			main: '#F65261',
+			main: '#64EACB',
 			light: '#ffffff',
-			dark: '#232323',
+			dark: '#171E2F',
 		},
 	},
 });

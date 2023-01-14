@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Body from '../../containers/Body';
-import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import ErrorBoundary from '../../containers/ErrorBoundary';
 import Footer from '../../containers/Footer';
@@ -19,6 +18,7 @@ export const routePath = {
 	invalid: '*',
 };
 
+// eslint-disable-next-line react/display-name
 const Loadable = (Component: any) => (props: any) =>
 	(
 		<Suspense fallback={<LoadingScreen />}>
@@ -27,16 +27,20 @@ const Loadable = (Component: any) => (props: any) =>
 	);
 
 // Authentication pages
-const Login = Loadable(lazy(() => import('../../pages/Login')));
-const Register = Loadable(lazy(() => import('../../pages/Register')));
+const Login = Loadable(lazy(async () => await import('../../pages/Login')));
+const Register = Loadable(
+	lazy(async () => await import('../../pages/Register'))
+);
 
 // Dashboard pages
-const Home = Loadable(lazy(() => import('../../pages/Home')));
-const New = Loadable(lazy(() => import('../../pages/New')));
-const Single = Loadable(lazy(() => import('../../pages/Single')));
+const Home = Loadable(lazy(async () => await import('../../pages/Home')));
+const New = Loadable(lazy(async () => await import('../../pages/New')));
+const Single = Loadable(lazy(async () => await import('../../pages/Single')));
 
 // Error pages
-const NotFound = Loadable(lazy(() => import('../../pages/NotFound')));
+const NotFound = Loadable(
+	lazy(async () => await import('../../pages/NotFound'))
+);
 
 const DashboardLayout: React.FC = () => {
 	return (

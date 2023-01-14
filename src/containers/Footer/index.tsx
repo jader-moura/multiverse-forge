@@ -5,7 +5,6 @@ import { Container } from './styles';
 const Footer: React.FC = () => {
 	return (
 		<Container>
-			Footer
 			<Logo />
 		</Container>
 	);
