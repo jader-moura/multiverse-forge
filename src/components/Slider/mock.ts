@@ -14,7 +14,7 @@ import image12 from '../../assets/images/monster-12.png';
 export const mockData: any = [
 	{
 		id: 1,
-		name: 'Monstro 1',
+		name: 'Monstro Monstruoso',
 		photo: {
 			url: image1,
 		},

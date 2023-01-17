@@ -48,6 +48,16 @@ export const materialUiTheme = createTheme({
 				}),
 			},
 		},
+		MuiChip: {
+			styleOverrides: {
+				root: ({ theme }) => ({
+					...{
+						color: `${theme.palette.primary.main}`,
+						backgroundColor: `${theme.palette.primary.dark}`,
+					},
+				}),
+			},
+		},
 		MuiTab: {
 			styleOverrides: {
 				root: ({ theme }) => ({
@@ -173,6 +183,7 @@ export const materialUiTheme = createTheme({
 			main: '#64EACB',
 			light: '#ffffff',
 			dark: '#171E2F',
+			// A100:
 		},
 	},
 });

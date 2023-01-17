@@ -19,7 +19,7 @@ export const SliderContent = styled.div`
 	backdrop-filter: blur(15px);
 	background-color: ${({ theme }) => theme.darkGrey}99;
 
-	min-width: calc(35% - 4rem);
+	width: calc(35% - 4rem);
 	height: 100%;
 	padding: 2rem;
 
@@ -28,8 +28,15 @@ export const SliderContent = styled.div`
 `;
 
 export const SliderContentName = styled.h3`
-	font-family: 'Creepster', cursive;
+	font-family: 'Frijole', cursive;
 	color: ${({ theme }) => theme.mainLight};
 	font-weight: lighter;
 	font-size: 32px;
 `;
+
+export const PowersList = styled.div`
+	display: flex;
+	gap: 1rem;
+`;
+
+export const SliderText = styled.p``;

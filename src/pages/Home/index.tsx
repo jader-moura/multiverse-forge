@@ -2,7 +2,8 @@ import { Box, Tab, Tabs } from '@mui/material';
 import React from 'react';
 import Slider from '../../components/Slider';
 
-import { Wrapper } from './styles';
+import { Title, Wrapper } from './styles';
+import Carousel from '../../components/Carousel';
 
 const Home: React.FC = () => {
 	const [value, setValue] = React.useState(0);
@@ -22,6 +23,8 @@ const Home: React.FC = () => {
 				</Tabs>
 			</Box>
 			<Slider />
+			<Title>Browse By Habitat</Title>
+			<Carousel />
 		</Wrapper>
 	);
 };
